@@ -1,0 +1,61 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>																																																										Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>333</x><y>45</y><w>342</w><h>153</h></coordinates><panel_attributes>Library
+--
+-items: LibraryItem[]
+-members: LibraryMember[]
+--
++addItem(item: LibraryItem): void
++addMember(member: LibraryMember): void     
++borrowItem(memberId: string, itemId: string): string 
++returnItem(memberId: string, itemId: string): string
++getLibrarySummary(): string
++getMembersBorrowedItems(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>378</x><y>531</y><w>216</w><h>90</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;  
+Borrowable
+--
++borrow(memberName: string): string
++returnItem(): string
++isAvailable(): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>387</x><y>279</y><w>216</w><h>180</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+LibraryItem
+--
+-_title : string
+-_itemId : string 
+-_isAvailable: boolean
+--
++title: string
++itemId: string {get}         
++available: boolean {set}     
++isAvailable(): boolean       
++borrow(memberName: string): string   
++returnItem(): string         
+#getDetails(): string (abs)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>261</y><w>189</w><h>63</h></coordinates><panel_attributes>magazine
+--
+-_issueDate: string
+--
++getDetails(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>369</y><w>189</w><h>63</h></coordinates><panel_attributes>Book     
+--
+-_author: string
+--
++getDetails(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>747</x><y>144</y><w>351</w><h>189</h></coordinates><panel_attributes>LibaryMember      
+--
+-_memberName: string
+-_memberId: string
+-_borrowedItems: LibraryItem[]
+--
++memberName(): string 
++memberId(): string  
++borrowItem(item: LibraryItem): string
++returnItem(itemId: string): string
++listBorrowedItems(): string
++countBorrowedItems(): number</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>666</x><y>135</y><w>99</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>477</y><w>189</w><h>72</h></coordinates><panel_attributes>DVD  
+--
+-_duration: string
+--
++getDetails(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>576</y><w>189</w><h>72</h></coordinates><panel_attributes>Theses 
+--
+-_researcher: string
+--
++getDetails(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>144</y><w>189</w><h>72</h></coordinates><panel_attributes>Newspapers
+--
+-_date: string
+--
++getDetails(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>594</x><y>324</y><w>522</w><h>153</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;150;560;10</additional_attributes></element><element><id>Relation</id><coordinates><x>477</x><y>189</y><w>27</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>450</y><w>135</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>414</y><w>135</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>360</y><w>135</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;20;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>252</y><w>135</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>189</y><w>135</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>477</x><y>450</y><w>27</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element></diagram>
